@@ -1,0 +1,20 @@
+---
+commitizen:
+  bump_message: Release version v$current_version -> v$new_version [skip ci]
+  customize:
+    bump_pattern: '^(?:Merged PR \d+: )?((BREAKING[\-\ ]CHANGE|\w+)(\(.+\))?!?):'
+    change_type_map:
+      feat: Feature
+      fix: Fix
+    changelog_pattern: '^((BREAKING[\-\ ]CHANGE|\w+)(\(.+\))?!?):'
+    commit_parser: "^((?P<change_type>feat|fix|refactor|perf|BREAKING CHANGE)(?:\\\
+      ((?P<scope>[^()\r\n]*)\\)|\\()?(?P<breaking>!)?|\\w+!):\\s(?P<message>.*)?"
+    schema: "<type>(<scope>): <subject>\r\n<BLANK LINE>\r\n<body>\r\n<BLANK LINE>\r\
+      \n<footer>"
+    schema_pattern: "(?s)(Merged PR \\d+|build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump)(\\\
+      (\\S+\\))?!?:( [^\n\r]+)((\n\n.*)|(\\s*))?$"
+  name: cz_customize
+  tag_format: v$version
+  update_changelog_on_bump: true
+  version: 0.0.0
+  version_scheme: semver
