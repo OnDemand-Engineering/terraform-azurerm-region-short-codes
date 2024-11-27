@@ -1,23 +1,3 @@
-## Contribution
-- Clone the repository into VS Code
-- Switch to the **development** branch
-- Install Python and pip (if not already installed)
-    - Download Python from **[Python download page](https://www.python.org/downloads/)**
-    Note: During installation, make sure to check the option to add Python to your PATH.
-- Install pre-commit (if not already installed)
-    - Open Command Prompt
-        - enter: ```pip install pre-commit```
-- Enable pre-commit for the repository
-    - Open Command Prompt
-        - Change directory to that of the repository
-        - enter: ```pre-commit install```
-- Make the required changes
-- Commit your changes with your commit messages in the following format:
-    - BREAKING CHANGE: *commit message*
-    - feat: *commit message*
-    - fix: *commit message*
-- Create a merge request to bring those changes back into the **main** branch.
-
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
